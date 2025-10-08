@@ -12,8 +12,8 @@ A Retrieval-Augmented Generation (RAG) chatbot project.
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/ragchatbot_test.git
-    cd ragchatbot_test
+    git clone https://github.com/HarithAiman243/Test.git
+    cd Test
     ```
 
 2. **Install dependencies:**
