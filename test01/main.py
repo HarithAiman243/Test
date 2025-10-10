@@ -14,17 +14,17 @@ List of components:
 
 from PyPDF2 import PdfReader, PdfWriter
 
-def get_pdf_content(pdf_path):
+def get_pdf_content(pdf_paths):
 
     raw_text = ""
-
-    for document in documents:
+    for pdf_path in pdf_paths:
         reader = PdfReader(pdf_path)
         content = []
         for page in reader.pages:
             content.append(page.extract_text())
     
     return "\n".join(content)
+
 # Chunking
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
