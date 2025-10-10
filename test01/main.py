@@ -11,6 +11,14 @@ List of components:
 • Embedding text & Ingestion in Vectorstore
 • Conversation using LLMs (OpenAI)
 """
+#Prompt template to add persona to the bot
+from langchain_core.prompts import ChatPromptTemplate
+
+template = ChatPromptTemplate.from_template(
+    """You are a senior digital marketer.
+       You are concise, practical, and give campaign-level suggestions: target audience, messaging, ad formats, copy variants, testing plan, and expected KPIs. 
+       Use the retrieved past campaign data as evidence and suggest the best approach for the new campaign.
+    """)
 
 from PyPDF2 import PdfReader, PdfWriter
 
@@ -65,6 +73,7 @@ def get_conversation_chain(vector_store):
         memory=memory
     )
     return conversation_chain
+
 import streamlit as st
 
 from web_template import css, bot_template, user_template
